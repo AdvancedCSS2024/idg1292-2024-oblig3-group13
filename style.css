@@ -18,10 +18,6 @@ section {
   margin: 0;
 }
 
-svg {
-  width: 100vw;
-}
-
 /* slide 1 */
 header {
   height: 100vh;
@@ -174,4 +170,16 @@ section {
   .slide__brands h2 {
     font-size: 35px;
     font-weight: lighter;
+  }
+
+  #text__box {
+    color: #fff;
+    background-color: black;
+  display: inline;
+  padding: 0.5rem;
+  opacity: 0.5;
+  border-radius: 25px;
+  
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
   }
