@@ -1,14 +1,17 @@
-/* whole page */
+/* whole page style */
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
-  overflow-x: hidden;
+  overflow-x: hidden; /* the content is "clipped" */
 }
 html {
-  scroll-snap-type: y mandatory;
+  scroll-snap-type: y mandatory; /* viewport of the scroll container must snap to a snap position if it isn't currently scrolled */
 }
 section {
-  scroll-snap-align: start;
+  scroll-snap-align: start; /* only one scroll is needed to go to the next section */
+}
+h2 {
+  font-size: 2vw;
 }
 
 /* slide 1 */
@@ -28,7 +31,7 @@ header {
   }
 
   &__title h1 {
-    background: url(img/dessert.svg);
+    background: url(img/dessert.svg); /* background img of the first slide */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -62,10 +65,15 @@ header {
 .city p {
   position: absolute;
   z-index: 2;
-  margin-left: 80px;
+  margin-left: 90px;
   padding: 10px;
   max-width: 50%;
   font-size: 2vw;
+  color: rgb(0, 0, 0);
+}
+.text__box {
+  background-color: rgb(255 255 255 / 30%);
+  border-radius: 15px;
 }
 
 .clouds {
@@ -129,13 +137,14 @@ header {
     padding: 3%;
     & ul {
       text-align: start;
+      max-width: 60%;
+      font-size: 1.3vw;
     }
   }
   & img {
-    max-width: 30%;
-    max-height: 30%;
+    max-width: 25%;
+    max-height: 25%;
     margin-left: 70%;
-    margin-top: 10%;
     position: absolute;
     opacity: 0;
     transition: opacity 15s ease;
